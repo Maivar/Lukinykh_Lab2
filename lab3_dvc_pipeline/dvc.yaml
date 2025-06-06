@@ -1,0 +1,15 @@
+stages:
+  prepare:
+    cmd: python prepare.py
+    outs:
+      - data.txt
+  train:
+    cmd: python train.py
+    deps:
+      - data.txt
+    outs:
+      - model.txt
+  evaluate:
+    cmd: python evaluate.py
+    deps:
+      - model.txt

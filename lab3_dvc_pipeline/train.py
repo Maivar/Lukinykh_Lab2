@@ -1,0 +1,1 @@
+open('model.txt', 'w').write('model trained on ' + open('data.txt').read())
